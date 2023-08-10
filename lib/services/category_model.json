@@ -1,0 +1,105 @@
+{
+    "categories": [
+      {
+        "name": "Women Clothing",
+        "subcategories": [
+          "dresses",
+          "tops",
+          "bottoms",
+          "outerwear",
+          "activewear",
+          "lingerie",
+          "accessories"
+        ]
+      },
+      {
+        "name": "computer & accessories",
+        "subcategories": [
+          "laptop accessories",
+          "computer peripherals",
+          "cables and adapters",
+          "storage devices",
+          "printers and scanners",
+          "audio accessories"
+        ]
+      },
+      {
+        "name": "Automobile",
+        "subcategories": [
+          "car parts",
+          "car accessories",
+          "car care products",
+          "tires and wheels",
+          "interior accessories",
+          "exterior accessories"
+        ]
+      },
+      {
+        "name": "kid & toys",
+        "subcategories": [
+          "action figures",
+          "dolls and playsets",
+          "building blocks",
+          "puzzles and board games",
+          "educational toys",
+          "outdoor toys"
+        ]
+      },
+      {
+        "name": "Sports",
+        "subcategories": [
+          "football",
+          "basketball",
+          "tennis",
+          "swimming",
+          "cycling",
+          "fitness equipment"
+        ]
+      },
+      {
+        "name": "Cellphone & tabs",
+        "subcategories": [
+          "smartphones",
+          "cases and covers",
+          "screen protectors",
+          "chargers and cables",
+          "headphones",
+          "smartwatch"
+        ]
+      },
+      {
+        "name": "Jewellery",
+        "subcategories": [
+          "necklaces",
+          "earrings",
+          "rings",
+          "bracelets",
+          "anklets",
+          "pendants"
+        ]
+      },
+      {
+        "name": "Men Clothing & fashion",
+        "subcategories": [
+          "shirts",
+          "pants",
+          "suits",
+          "jackets",
+          "shoes",
+          "accessories"
+        ]
+      },
+      {
+        "name": "Furniture",
+        "subcategories": [
+          "living room furniture",
+          "bedroom furniture",
+          "dining room furniture",
+          "office furniture",
+          "outdoor furniture",
+          "storage and organization"
+        ]
+      }
+    ]
+  }
+  

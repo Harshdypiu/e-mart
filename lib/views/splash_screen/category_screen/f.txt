@@ -1,0 +1,116 @@
+import 'package:emart_app/common_widget/our_button.dart';
+import 'package:emart_app/consts/colors.dart';
+import 'package:emart_app/consts/consts.dart';
+import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
+
+class ItemDetails extends StatelessWidget {
+  final String? title;
+
+  const ItemDetails({Key? key, required this.title}) : super(key: key);
+
+  static const EdgeInsets _paddingAll8 = EdgeInsets.all(8);
+  static final List<Color> colorList = [
+    Vx.randomPrimaryColor,
+    Vx.randomPrimaryColor,
+    Vx.randomPrimaryColor,
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: lightGrey,
+      appBar: AppBar(
+        title: title!.text.fontFamily(bold).color(darkFontGrey).make(),
+        actions: [
+          IconButton(onPressed: () {}, icon: Icon(Icons.share)),
+          IconButton(onPressed: () {}, icon: Icon(Icons.favorite_outline))
+        ],
+      ),
+      body: Column(
+        children: [
+          Padding(
+            padding: _paddingAll8,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  VxSwiper.builder(
+                    aspectRatio: 16 / 9,
+                    autoPlay: true,
+                    height: 350,
+                    itemCount: 3,
+                    itemBuilder: (context, index) {
+                      return Image.asset(imgFc5, width: double.infinity, fit: BoxFit.cover).px8();
+                    },
+                  ),
+                  const SizedBox(height: 10),
+                  title!.text.size(16).fontFamily(bold).color(darkFontGrey).make(),
+                  const SizedBox(height: 10),
+                  VxRating(
+                    onRatingUpdate: (value) {},
+                    normalColor: textfieldGrey,
+                    selectionColor: golden,
+                    count: 5,
+                    size: 25,
+                    stepInt: true,
+                  ),
+                  const SizedBox(height: 10),
+                  "\$130000".text.color(redColor).fontFamily(bold).size(18).make(),
+                  const SizedBox(height: 10),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            "seller".text.color(whiteColor).fontFamily(semibold).make(),
+                            const SizedBox(height: 5),
+                            "in house brand".text.size(12).fontFamily(semibold).color(darkFontGrey).make(),
+                          ],
+                        ),
+                      ),
+                      CircleAvatar(
+                        backgroundColor: whiteColor,
+                        child: Icon(Icons.message_rounded, color: darkFontGrey),
+                      ),
+                    ],
+                  ).box.height(70).padding(_paddingAll8).color(textfieldGrey).make(),
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 100,
+                            child: "color".text.color(darkFontGrey).make(),
+                          ),
+                          Row(
+                            children: List.generate(
+                              colorList.length,
+                              (index) => VxBox().size(40, 40).roundedFull.color(colorList[index]).make(),
+                            ),
+                          ),
+                        ],
+                      ).box.padding(_paddingAll8).make()
+                    ],
+                  ),
+                  box.white.shadowSm.make(),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            width: double.infinity,
+            height: 60,
+            child: ourButton(
+              onPress: () {},
+              title: "Add to cart",
+              color: redColor,
+              textcolor: whiteColor,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
